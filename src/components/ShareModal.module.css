@@ -1,0 +1,73 @@
+@import '../variables.css';
+
+#modal {
+    position: absolute;
+    right: -75px;
+    bottom: 85px;
+}
+
+#share-icons {
+    position: relative;
+    background-color: var(--clr-veryDarkGrayishBlue);
+    padding: 17px 47px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    box-shadow: 0px 15px 80px -15px hsla(217, 19%, 35%, 0.75);
+}
+
+#share-icons > p {
+    letter-spacing: 5px;
+    color: var(--clr-grayishBlue);
+}
+
+#share-icons img {
+    height: 17px;
+    width: auto;
+    cursor: pointer;
+}
+
+#share-icons:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-top: solid 10px var(--clr-veryDarkGrayishBlue);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (width < 780px) {
+    #modal {
+        right: 0;
+        top: unset;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #share-icons {
+        padding: 30px 40px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: none;
+    }
+
+    #share-icons::after {
+        border: none;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block;
+    }
+}

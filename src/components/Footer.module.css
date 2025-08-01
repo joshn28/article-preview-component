@@ -1,0 +1,50 @@
+@import '../variables.css';
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer > div {
+    display: flex;
+    height: 40px;
+    gap: 0 10px;
+    align-items: center;
+}
+
+#footer > div:first-of-type > img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.share-button, .active:hover {
+    background-color: var(--clr-lightGrayishBlue);
+    background-image: url("../../images/icon-share.svg");
+}
+
+.active, .share-button:hover {
+    background-color: var(--clr-desaturatedDarkBlue);
+    background-image: url("../../images/icon-share-active.svg");
+}
+
+.share-button, .active {
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-content {
+    color: var(--clr-grayishBlue);
+}
+
+.footer-content > p:first-of-type {
+    color: var(--clr-veryDarkGrayishBlue);
+    font-weight: var(--fw-bold);
+}
